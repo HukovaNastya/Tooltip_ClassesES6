@@ -17,7 +17,8 @@ class Tooltip{
   show() {
        return this.target.addEventListener('mouseover', () => {
            toolTipElement.textContent = this.content;
-          toolTipElement.style.display = 'block';
+           toolTipElement.classList.add(`${this.classes}`);
+           toolTipElement.style.display = 'block';
       }, false);
    }
   hide() {

@@ -1,27 +1,21 @@
-/* this is a _demo_ container. remember the importance of relative and absolute positioning */
-.tooltip-container, .tooltip-container1{
+.tooltip-container{
     position: relative;
+    padding: 0 20px;
 }
 
-
-/* styling of the tooltip display */
-.tooltip-text {
+.tooltip-text, .tooltip-text-new {
     display: none;
     position: absolute;
     top: -60px;
     z-index: 1;
     background: #00732c;
-    padding: 8px;
     font-size: 1rem;
     color: #fff;
     border-radius: 2px;
-    /*animation: fadeIn 0.6s;*/
+    padding: 10px 20px;
 }
 
-
-
-/* optional styling to add a "wedge" to the tooltip */
-.tooltip-text:before {
+.tooltip-text:before, .tooltip-text-new {
     content: "";
     position: absolute;
     top: 100%;
@@ -31,9 +25,18 @@
     border-top: 8px solid #00732c;
 }
 
+.tooltip-text-new {
+    margin-left: 250px;
+    top: 40%;
+    left: 20%;
+}
 
 .tooltipe-wrapper{
     margin-top: 200px;
     display: flex;
     flex-direction: row;
+}
+
+.tooltipe-wrapper .tooltip-container + .tooltip-container {
+    padding-left: 100px;
 }
